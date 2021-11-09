@@ -25,6 +25,13 @@ load(
     "istioapi_dependencies",
 )
 
+# FIXME: temporary code, to use rules_docker from PR#1918 instead of master
+local_repository(
+    name = "io_bazel_rules_docker",
+    path = "/bazel/rules_docker",
+)
+# END FIXME
+
 googletest_repositories()
 
 istioapi_dependencies()
